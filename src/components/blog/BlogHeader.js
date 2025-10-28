@@ -2,6 +2,7 @@ import { Button, Typography } from '@mui/material'
 import { useState } from 'react'
 import styles from './BlogHeader.module.css'
 import Dots from 'components/overlay/dots/dots'
+import Fire from '../../assets/images/blog/fire.svg'
 
 const categories = ['Popular', 'Web hosting', 'VPN', 'Cybersecurity', 'Engineering', 'Product Updates', 'Top stories']
 
@@ -30,11 +31,12 @@ function BlogHeader() {
 						<Button
 							key={category}
 							data-aos="fade-up"
-							className={`btn btn-blog `}
+							className={`btn btn-blog btn-card`}
 							onClick={() => {
 								setSelectedCategory(category)
 							}}
 							disableRipple>
+							{category === 'Popular' && <img alt="fire icon" width={24} height={24} src={Fire} />}
 							<Typography>{category}</Typography>
 						</Button>
 					))}

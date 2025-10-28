@@ -8,7 +8,7 @@ function BlogSubscribe() {
 			<Dots type="blog-subscribe-1" />
 			<Dots type="blog-subscribe-2" />
 			<div className="inside">
-				<div className={styles.subscribeBox}>
+				<div className={styles.subscribeBox} data-aos="fade-up">
 					<h2 className="text-center">
 						<span className={`text-decorated ${styles.subscribeTitle}`}>Subscribe to </span>{' '}
 						<span className={styles.subcribeSubTitle}>our Blog</span>

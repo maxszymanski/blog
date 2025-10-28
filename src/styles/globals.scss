@@ -155,20 +155,22 @@ p.text {
 .btn {
 	position: relative;
 	height: 40px;
-
 	padding: 0px 16px;
 	padding-right: 10px;
-
 	border-radius: 8px;
 	border: 1.5px solid rgba($color-orange, 0.08);
 	background: rgba($color-orange, 0.12);
 	backdrop-filter: blur(6px);
-
 	display: flex;
 	gap: 12px;
 	align-items: center;
 	&-blog {
 		flex-shrink: 0;
+	}
+
+	&-card {
+		gap: 8px !important;
+		width: fit-content;
 	}
 
 	p {

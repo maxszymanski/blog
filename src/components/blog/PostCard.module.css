@@ -1,0 +1,137 @@
+.card {
+	background-image: url('../../assets/images/blog/card-bg.png');
+	background-size: 100% 100%;
+	width: 100%;
+	max-width: 384px;
+	max-height: 430px;
+	overflow: hidden;
+	padding: 0 1px;
+	position: relative;
+	/* 
+	& img {
+		width: 100%;
+		height: auto;
+		max-height: 250px;
+		object-fit: cover;
+	} */
+
+	@media screen and (min-width: 420px) {
+		height: 430px;
+	}
+}
+
+.imageBox {
+	position: relative;
+}
+.cardInfoBox {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.cardInfoBoxSmall {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.cardInfoBoxOne {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.cardClock {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.btnBox {
+	position: absolute;
+	bottom: 0;
+	left: 16px;
+
+	@media screen and (min-width: 390px) {
+		left: 24px;
+	}
+
+	& img {
+		height: 24px;
+		width: 24px;
+	}
+}
+
+.largeCard {
+	display: none;
+	background-image: url('../../assets/images/blog/large-card.png');
+	background-size: 100% 100%;
+	width: 100%;
+	padding: 32px;
+
+	@media screen and (min-width: 1024px) {
+		height: 340px;
+		display: block;
+		margin-bottom: 48px;
+	}
+}
+
+.cardLargeText {
+	font-size: 40px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	max-width: 504px;
+	line-height: 48px;
+	margin: 32px 0;
+}
+.cardLine {
+	width: 568px;
+	height: 1px;
+	background-image: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 80%);
+	margin-bottom: 32px;
+	opacity: 8%;
+}
+
+.cardHero {
+	width: 100%;
+	height: auto;
+	max-height: 250px;
+	object-fit: cover;
+	position: relative;
+}
+
+.cardInfo {
+	padding: 24px 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	@media screen and (min-width: 390px) {
+		padding: 24px 24px;
+	}
+}
+
+.cardText {
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	vertical-align: middle;
+	line-height: 28px;
+
+	@media screen and (min-width: 390px) {
+		font-size: 24px;
+	}
+}
+
+.grayText {
+	font-weight: 500;
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+	line-height: 16px;
+	opacity: 40%;
+}
+
+.cardTeam {
+	font-weight: 500;
+	line-height: 20px;
+	vertical-align: middle;
+	color: #fb6306;
+}

@@ -1,5 +1,15 @@
+import BlogAuthorHeader from 'components/blog/BlogAuthorHeader'
+import PostList from 'components/blog/PostList'
+
 function BlogAuthor() {
-	return <div>autor page</div>
+	return (
+		<div>
+			<BlogAuthorHeader />
+			<main>
+				<PostList authorPage />
+			</main>
+		</div>
+	)
 }
 
 export default BlogAuthor

@@ -93,7 +93,7 @@ const App = () => {
 							</BlogLayout>
 						</Route>
 
-						<Route exact path="/blog/autor/:slug">
+						<Route exact path="/blog/author/:slug">
 							<BlogLayout>
 								<BlogAuthor />
 							</BlogLayout>
