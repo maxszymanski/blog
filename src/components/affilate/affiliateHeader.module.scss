@@ -1,0 +1,18 @@
+
+.animShadow{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1120px;
+  height: auto;
+  aspect-ratio: 2/1;
+  max-width: unset;
+  z-index: -1;
+}
+.header{
+  background-image: url("../../assets/images/affiliate/headerBg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}

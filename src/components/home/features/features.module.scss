@@ -1,0 +1,88 @@
+@import '/src/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 90px auto 0;
+}
+
+.inside .title {
+	position: relative;
+	width: 100%;
+
+	max-width: 650px;
+	margin: 0 auto;
+
+	text-align: center;
+	font-family: $font1;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 115%;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	@media screen and (max-width: 688px){
+		font-size: 28px;
+
+	}
+}
+
+.inside .desc {
+	position: relative;
+	width: 100%;
+
+	max-width: 410px;
+	margin: 0 auto;
+	margin-top: 16px;
+
+	p {
+		text-align: center;
+		font-family: $font1;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+
+		background: linear-gradient(
+			180deg,
+			#fff 0%,
+			rgba(255, 255, 255, 0.5) 100%
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		opacity: 0.5;
+	}
+}
+
+.inside .points {
+	position: relative;
+	width: 100%;
+	margin-top: 64px;
+
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+
+	@media screen and (max-width: 860px) and (min-width: 480px){
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

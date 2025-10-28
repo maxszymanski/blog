@@ -1,0 +1,137 @@
+@import "/src/styles/variables.scss";
+
+.section {
+    position: relative;
+    width: 100%;
+    z-index: 4;
+
+    padding: 64px 0px;
+
+    border-top: 1px solid $color-border;
+}
+
+.section .inside {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        gap: 36px;
+    }
+}
+
+.inside .left {
+    position: relative;
+}
+
+.inside .left .logo {
+    position: relative;
+
+    filter: saturate(0);
+
+    img {
+        position: relative;
+
+        width: 111px;
+        height: auto;
+    }
+}
+
+.inside .left .stripe {
+    position: relative;
+
+    margin-top: 24px;
+
+    width: 24px;
+    height: 2px;
+
+    background: $color-orange;
+}
+
+.inside .left .copyRight {
+    position: relative;
+    margin-top: 54px;
+
+    font-family: $font1;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    opacity: 0.4;
+    background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    span {
+        border-bottom: 1.5px solid #575454;
+    }
+}
+
+.inside .right {
+    position: relative;
+
+    display: flex;
+    gap: 160px;
+    padding-right: 240px;
+    @media screen and (max-width: 1150px) {
+        padding-right: 40px;
+    }
+    @media screen and (max-width: 815px) {
+        gap: 40px;
+    }
+    @media screen and (max-width: 700px) {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+.inside .right .oneList {
+    position: relative;
+    @media screen and (max-width: 700px) {
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+.inside .right .oneList .oneTab {
+    position: relative;
+    display: block;
+    margin-top: 8px;
+
+    p {
+        color: $color-text-secondary;
+        font-family: $font1;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+
+        opacity: 0.75;
+        background: linear-gradient(
+            180deg,
+            #fff 0%,
+            rgba(255, 255, 255, 0.5) 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    transition: opacity $animation1;
+}
+
+.inside .right .oneList .oneTab:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

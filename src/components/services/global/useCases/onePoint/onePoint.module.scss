@@ -1,0 +1,128 @@
+@import '/src/styles/variables.scss';
+
+.rightLine {
+	position: relative;
+	width: 1px;
+	height: 78px;
+
+	background: $color-border;
+
+	@media screen and (max-width: 688px){
+		display: none;
+	}
+}
+
+.point {
+	position: relative;
+	width: calc(25% - 49px);
+	height: 78px;
+	z-index: 4;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-end;
+
+	//overflow: hidden;
+	@media screen and (max-width: 688px){
+		width: 100%;
+	}
+}
+
+.point:hover {
+	cursor: pointer;
+}
+
+.point .icon {
+	position: relative;
+	width: 24px;
+	height: auto;
+
+	top: 0px;
+	opacity: 1;
+
+	transition: opacity $animation1, top $animation1;
+
+	filter: $color-orange-filter;
+}
+
+.point .pointTitle {
+	position: relative;
+	width: 100%;
+	margin-top: 12px;
+
+	transition: margin-top $animation1;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.point .arrow_right {
+	position: absolute;
+	width: 14px;
+	height: auto;
+
+	transform: rotate(90deg);
+	transition: transform $animation1;
+
+	right: 0px;
+	top: 50%;
+	translate: 0 -50%;
+
+	filter: $color-white-filter;
+	opacity: 0.4;
+}
+
+.point .pointDesc {
+	position: relative;
+	width: 100%;
+	margin-top: 0px;
+	max-height: 0px;
+
+	transition: max-height $animation1, margin-top $animation1,
+		opacity $animation1;
+
+	font-family: $font1;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	opacity: 0;
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.point[data-opened='true'] {
+	.pointDesc {
+		margin-top: 8px;
+		max-height: 60px;
+		opacity: 0.4;
+	}
+
+	.icon {
+		top: -15px;
+		opacity: 0;
+	}
+
+	.pointTitle {
+		margin-top: 0px;
+	}
+
+	.arrow_right {
+		transform: rotate(-90deg);
+	}
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

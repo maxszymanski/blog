@@ -1,0 +1,56 @@
+@import '/src/styles/variables.scss';
+
+.noti {
+	position: absolute;
+	right: 24px;
+	top: 24px;
+	height: 36px;
+
+	padding: 0px 16px;
+	padding-left: 8px;
+
+	border-radius: 8px;
+	border: 1.5px solid rgba($color-orange, 0.08);
+	background: rgba($color-orange, 0.12);
+	backdrop-filter: blur(6px);
+
+	display: flex;
+	gap: 8px;
+	align-items: center;
+
+	p {
+		color: $color-orange;
+		font-family: $font1;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		text-transform: none;
+	}
+
+	img {
+		position: relative;
+		width: 24px;
+		height: auto;
+
+		filter: $color-orange-filter;
+
+		opacity: 1;
+	}
+
+	@media screen and (max-width: 860px){
+		position: unset;
+	}
+}
+
+.noti[data-contenttype='locations-switzerland-longdesc'] {
+	top: -12px;
+}
+
+.noti[data-contenttype='longdesc'] {
+	top: -12px;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

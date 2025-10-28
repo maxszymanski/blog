@@ -1,0 +1,157 @@
+@import "../../styles/variables.scss";
+
+.main{
+  background-image: url("../../assets/images/login/bottomBackground.png"), url("../../assets/images/login/loginAddons.png");
+  background-position: bottom center, center;
+  background-repeat: no-repeat;
+  background-size: contain, 80%;
+  flex: 43;
+}
+
+.background{
+  height: 100vh;
+  top: 0;
+  right: 0;
+  position: sticky;
+    background-image: url("../../assets/images/login/loginBg.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 29;
+  @media screen and (max-width: 1128px){
+    flex: unset;
+    padding: 36px;
+  }
+  @media screen and (max-width: 668px){
+    height: auto;
+  }
+}
+
+.underlined__link{
+  position: relative;
+  color: #73330b;
+  background: unset !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  text-decoration: underline;
+  transition: .3s;
+  &:hover{
+    color: $color-orange;
+    opacity: 1;
+  }
+}
+
+.container{
+  @media screen and (max-width: 815px){
+    flex-direction: column !important;
+  }
+}
+
+.inputContainer{
+  position: relative;
+  margin-top: 36px;
+  flex: 1;
+  span{
+    color: #70310b
+  }
+
+  label{
+    line-height: 1;
+    span{
+      position: relative;
+      z-index: 6;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: calc(100% + 2px);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #15100f;
+      //background: red;
+      z-index: -1;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+    }
+  }
+
+
+    &:focus-within{
+      label{
+        &::after{
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+}
+
+.animShadow{
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  width: 200%;
+  max-width: unset;
+  z-index: -1;
+}
+
+.loginHeader{
+
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+  padding-bottom: 52px;
+  position: relative;
+}
+
+.form{
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+  label{
+    display: block;
+    position: absolute;
+    left: 16px;
+    padding: 0 4px;
+    top: -6px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 2;
+  }
+}
+
+.forgot{
+  text-align: right;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  color: #73330b;
+  margin: 8px 0 24px;
+  transition: .3s;
+  &:hover{
+    color: $color-orange;
+  }
+}
+
+.captcha{
+  gap: 8px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  input{
+    flex: 1;
+    @media screen and (max-width: 815px){
+      flex: unset;
+      height: 48px;
+    }
+  }
+}

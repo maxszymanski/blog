@@ -1,0 +1,192 @@
+@import '/src/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	margin-top: 125px;
+}
+
+.section .inside .bgShadow {
+	position: absolute;
+	width: 2553px;
+	height: auto;
+
+	left: 50%;
+	top: 50%;
+
+	translate: -50% -50%;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.section .inside .title {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+
+	font-family: $font1;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 115%;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.section .inside .bottom {
+	position: relative;
+	width: 100%;
+	margin-top: 60px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media screen and (max-width: 688px){
+		flex-direction: column-reverse;
+	}
+}
+
+.section .inside .bottom .left {
+	position: relative;
+	display: flex;
+	gap: 16px;
+	flex-direction: column;
+}
+
+.section .inside .bottom .left .onePoint {
+	position: relative;
+	width: 565px;
+
+	padding: 24px;
+	display: flex;
+	align-items: center;
+	gap: 24px;
+
+	background: url('../../../../assets/images/services/global/whyChoose/normalBg.png');
+	background-size: 100% 100%;
+
+	transition: margin-left $animation1;
+
+	@media screen and (max-width: 688px){
+		width: 100%;
+		flex-direction: column;
+		background-image: unset;
+		align-items: flex-start;
+		border: 1px solid rgba($color-border, 0.08);
+		border-radius: 16px;
+		gap: 12px;
+	}
+}
+
+.section .inside .bottom .left .onePoint[data-number='2'] {
+	background: url('../../../../assets/images/services/global/whyChoose/hoveredBg.png');
+	background-size: 100% 100%;
+
+	margin-left: 72px;
+
+	@media screen and (max-width: 688px){
+		margin-left: 0;
+		background-image: unset;
+	}
+}
+
+.section .inside .bottom .left .onePoint .icon {
+	position: relative;
+	width: 48px;
+	min-width: 48px;
+	height: 48px;
+
+	margin-left: 8px;
+
+	border: 1px solid rgba($color-orange, 0.08);
+	border-radius: 8px;
+
+	img {
+		position: absolute;
+		width: 24px;
+		height: auto;
+
+		left: 50%;
+		top: 50%;
+
+		translate: -50% -50%;
+
+		filter: $color-orange-filter;
+	}
+
+	@media screen and (max-width: 688px){
+		margin-left: 0;
+	}
+}
+
+.section .inside .bottom .left .onePoint .texts {
+	position: relative;
+}
+
+.section .inside .bottom .left .onePoint .texts .pointTitle {
+	position: relative;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.section .inside .bottom .left .onePoint .texts .desc {
+	position: relative;
+	margin-top: 8px;
+	max-width: 440px;
+
+	font-family: $font1;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	opacity: 0.5;
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.section .inside .bottom .rightImg {
+	position: relative;
+	width: 501px;
+	height: auto;
+
+	.img {
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+
+	@media screen and (max-width: 688px){
+		width: 90%;
+		max-width: 320px;
+	}
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

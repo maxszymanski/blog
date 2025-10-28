@@ -1,0 +1,37 @@
+
+
+.mobile{
+  &__back{
+    font-size: 20px;
+    font-weight: 600;
+    span{
+      font-size: 14px;
+      font-weight: 400;
+    }
+    &__container{
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      img{
+        transform: scaleX(-1);
+        filter: invert(44%) sepia(95%) saturate(2073%) hue-rotate(355deg) brightness(97%) contrast(104%);
+      }
+    }
+  }
+  &__name{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+  }
+  &__description{
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 4px;
+    line-height: 1;
+  }
+  &__link{
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,11 @@
+@import '/src/styles/variables.scss';
+
+.page {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+// RWD
+@media (max-width: 780px) {
+}

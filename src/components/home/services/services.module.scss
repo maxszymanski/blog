@@ -1,0 +1,238 @@
+@import '/src/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 120px auto 0;
+
+	@media screen and (max-width: 860px){
+		margin-top: 0px;
+	}
+}
+
+.section .inside .hideMobile{
+	@media screen and (max-width: 688px){
+		opacity: .35;
+	}
+}
+
+.listNav{
+	position: absolute;
+	z-index: 9999;
+	top: 50%;
+	width: 36px;
+	height: 36px;
+	transform: translateY(-50%);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.inside .title {
+	position: relative;
+	width: 100%;
+
+	max-width: 650px;
+	margin: 0 auto;
+
+	text-align: center;
+	font-family: $font1;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 115%;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.inside .desc {
+	position: relative;
+	width: 100%;
+
+	max-width: 410px;
+	margin: 0 auto;
+	margin-top: 16px;
+
+	p {
+		text-align: center;
+		font-family: $font1;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+
+		background: linear-gradient(
+			180deg,
+			#fff 0%,
+			rgba(255, 255, 255, 0.5) 100%
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		opacity: 0.5;
+	}
+}
+
+.inside .services {
+	position: relative;
+	width: 100%;
+	margin-top: 64px;
+}
+
+.inside .services .categories {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.inside .services .categories .oneCategory {
+	position: relative;
+	height: 40px;
+
+	padding: 0px 16px;
+	padding-left: 10px;
+
+	border-radius: 8px;
+	border: 1.5px solid rgba($color-orange, 0.08);
+	background: rgba($color-orange, 0.12);
+	backdrop-filter: blur(6px);
+
+	display: flex;
+	gap: 8px;
+	align-items: center;
+
+	p {
+		color: $color-white;
+		font-family: $font1;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		text-transform: none;
+
+		transition: color $animation1;
+	}
+
+	img {
+		position: relative;
+		width: 24px;
+		height: auto;
+
+		filter: $color-orange-filter;
+	}
+
+	opacity: 0.4;
+	transition: opacity $animation1;
+}
+
+.inside .services .categories .oneCategory:hover {
+	opacity: 0.6;
+}
+
+.inside .services .categories .oneCategory[data-active='true'] {
+	opacity: 1;
+
+	p {
+		color: $color-orange;
+	}
+}
+
+.inside .services .lists {
+	position: relative;
+	width: 100%;
+	height: 340px;
+	margin-top: 40px;
+
+	@media screen and (max-width: 688px){
+		height: 640px;
+	}
+}
+
+.inside .services .lists .oneList {
+	position: absolute;
+	width: 100%;
+
+	left: -100%;
+
+	opacity: 0;
+	transition: opacity $animation1, left 0.7s;
+	pointer-events: none;
+	display: none;
+
+	@media screen and (max-width: 688px){
+		position: absolute;
+	}
+}
+
+.inside .services .lists .oneList[data-smoothfix2='true'] {
+	display: block;
+}
+
+.inside .services .lists .oneList[data-smoothfix='true'] {
+	display: block;
+}
+
+.inside .services .lists .oneList[data-active='true'] {
+	left: 0%;
+
+	opacity: 1;
+	pointer-events: auto;
+	display: block;
+
+	@media screen and (max-width: 688px) {
+		top: 0;
+	}
+}
+
+.inside .services .squares {
+	position: relative;
+	width: 100%;
+	margin-top: 40px;
+
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+
+	@media screen and (max-width: 688px) and (min-width: 480px){
+		margin-top: -64px;
+	}
+}
+
+.inside .services .squares .oneSquare {
+	position: relative;
+	width: 24px;
+	height: 4px;
+
+	border-radius: 1px;
+
+	background: rgba($color-white, 0.12);
+	transition: background $animation1;
+}
+
+.inside .services .squares .oneSquare:hover {
+	background: rgba($color-orange, 0.5);
+	cursor: pointer;
+}
+
+.inside .services .squares .oneSquare[data-active='true'] {
+	background: $color-orange;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

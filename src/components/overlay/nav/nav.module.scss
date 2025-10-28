@@ -1,0 +1,492 @@
+@import "/src/styles/variables.scss";
+
+.section {
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    background: #120f0f;
+
+    @media screen and (max-width: 1045px) {
+        position: sticky;
+        top: 0;
+        background: #120f0f;
+    }
+}
+
+.section .inside {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 6px 0;
+    border-bottom: 1px solid $color-border;
+    &.active {
+        position: sticky;
+        top: 0;
+    }
+}
+
+.inside .left {
+    position: relative;
+
+    z-index: 4;
+}
+
+.inside .left .logo {
+    position: relative;
+
+    width: 111px;
+    height: auto;
+
+    filter: saturate(0);
+}
+
+.inside .center .oneTab {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 0 20px;
+
+    img {
+        position: relative;
+        width: 16px;
+
+        filter: brightness(0) invert(50%) sepia(91%) saturate(0%)
+            hue-rotate(352deg) brightness(94%) contrast(110%);
+    }
+
+    p {
+        color: $color-text-secondary;
+        font-family: $font1;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+
+        @media (max-width: 1045px) {
+            font-size: 18px;
+        }
+    }
+}
+
+// `src/components/overlay/nav/nav.module.scss`
+@media (min-width: 1045px) {
+    .megamenu {
+        top: calc(100% + 48px);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(17, 15, 15, 0.99);
+        background-image: linear-gradient(
+            to bottom,
+            rgba(251, 99, 6, 0),
+            rgba(251, 99, 6, 0.16)
+        );
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid #26170e;
+        z-index: 90;
+        transition: 0.15s;
+        width: 1000px;
+        max-width: 1000px;
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        pointer-events: none; // Prevent hover on megamenu itself
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
+            max-width: 215px;
+
+            a {
+                display: flex;
+                align-items: center;
+
+                div {
+                    margin-left: 12px;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    opacity: 0.5;
+                    transition: opacity 0.6s;
+
+                    b {
+                        font-weight: 600;
+                    }
+                }
+
+                &:hover {
+                    p {
+                        opacity: 1;
+                    }
+
+                    img {
+                        filter: brightness(0) invert(50%) sepia(91%)
+                            saturate(2512%) hue-rotate(352deg) brightness(94%)
+                            contrast(110%);
+                    }
+                }
+            }
+
+            a {
+                color: $color-text-secondary;
+                font-family: $font1;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                transition: color 0.6s;
+
+                &:hover {
+                    color: $color-orange;
+                }
+            }
+        }
+    }
+}
+.parent {
+    padding: 20px !important;
+    @media (max-width: 1045px) {
+        position: relative;
+        padding: 16px 0 !important;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url("../../../assets/icons/arrow_right.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            filter: invert(57%) sepia(44%) saturate(5886%) hue-rotate(353deg)
+                brightness(95%) contrast(108%);
+        }
+    }
+}
+
+.parent:hover .megamenu {
+    visibility: visible;
+    opacity: 1;
+    top: 48px;
+    pointer-events: auto; // Allow interactions when parent is hovered
+}
+
+.inside .center .oneTab:not(.parent):hover {
+    cursor: pointer;
+
+    img {
+        filter: brightness(0) invert(50%) sepia(91%) saturate(2512%)
+            hue-rotate(352deg) brightness(94%) contrast(110%);
+    }
+
+    p {
+        color: $color-orange;
+    }
+}
+.inside .center .oneTab[data-active="true"] {
+    img {
+        filter: brightness(0) invert(50%) sepia(91%) saturate(2512%)
+            hue-rotate(352deg) brightness(94%) contrast(110%);
+    }
+
+    p {
+        color: $color-orange;
+    }
+}
+
+.inside .right {
+    position: relative;
+
+    display: flex;
+    gap: 8px;
+
+    z-index: 4;
+}
+
+.loginBtn {
+    position: relative;
+    height: 32px;
+
+    padding: 0px 24px;
+
+    border-radius: 8px;
+    background: $color-orange;
+
+    p {
+        color: $color-text-primary;
+        font-family: $font1;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+
+        text-transform: none;
+    }
+
+    transition: opacity $animation1;
+}
+
+.loginBtn:hover {
+    opacity: 0.8;
+}
+
+.cartBtn {
+    position: relative;
+    height: 32px;
+
+    padding: 0px 16px;
+
+    border-radius: 8px;
+    background: none;
+
+    p {
+        color: $color-text-secondary;
+        font-family: $font1;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+
+        text-transform: none;
+    }
+
+    transition: opacity $animation1;
+}
+
+.cartBtn:hover {
+    background: none;
+    opacity: 0.8;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}
+
+.menuBtn {
+    display: none;
+    margin-right: 8px;
+    span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background-color: $color-text-primary;
+        position: relative;
+        border-radius: 9px;
+        opacity: 0.75;
+        transition: 0.3s;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 2px;
+            background-color: $color-text-primary;
+            border-radius: 9px;
+            opacity: 0.75;
+            transition: 0.3s;
+        }
+        &::after {
+            top: 8px;
+        }
+        &::before {
+            top: -8px;
+        }
+    }
+
+    &.active {
+        span {
+            background-color: transparent;
+            &::before,
+            &::after {
+                top: 0;
+                background: $color-orange;
+            }
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    @media (max-width: 1045px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.megamenuOptions {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    gap: 8px;
+
+    @media (max-width: 1045px) {
+        flex-direction: column;
+        gap: 16px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.megamenuOneOption {
+    padding: 24px 16px;
+    object-fit: fill;
+    border: 1px solid rgba(251, 99, 6, 0);
+    transition: 0.6s;
+    border-radius: 12px;
+    position: relative;
+    p {
+        font-weight: 600;
+        font-size: 14px;
+        @media screen and (max-width: 860px) {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+        }
+    }
+    .coloredFill,
+    .coloredStroke {
+        transition: 0.3s;
+    }
+    &:hover {
+        //border: 1px solid $color-orange;
+        .megamenuBackground {
+            .coloredFill {
+                fill: $color-orange !important;
+                fill-opacity: 1;
+                opacity: 1;
+            }
+            .coloredStroke {
+                opacity: 1;
+                stroke: $color-orange !important;
+                stroke-opacity: 1;
+            }
+        }
+    }
+
+    @media screen and (max-width: 860px) {
+        padding: 0;
+        margin-top: 8px;
+    }
+}
+
+.megamenuBackground {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: 0.6s;
+    pointer-events: none;
+
+    svg {
+        width: 100%;
+        //height: 321px;
+        //height: 100%;
+        //object-fit: cover;
+    }
+    @media screen and (max-width: 860px) {
+        position: unset;
+    }
+}
+
+.showOnMobile {
+    display: none;
+    @media screen and (max-width: 450px) {
+        display: block;
+    }
+}
+
+.hideOnMobile {
+    @media screen and (max-width: 450px) {
+        display: none;
+    }
+}
+
+.inside .center {
+    position: relative;
+
+    bottom: 0;
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    z-index: 3;
+    @media (min-width: 1045px) {
+        gap: 2px;
+    }
+
+    @media (max-width: 1045px) {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 65px;
+        height: 100%;
+        width: calc(100% - 48px);
+        gap: 0;
+        border: 0 solid #3e1e0b;
+        overflow: hidden;
+        background-image: linear-gradient(to top, #361c0d, #110f0f);
+        padding: 0 24px;
+        transition: 0.6s;
+        flex-direction: column;
+        max-height: 0;
+        border-radius: 8px;
+        &.active {
+            max-height: calc(100vh - 24px - 65px);
+            min-height: 90vh;
+            padding: 24px;
+            border-width: 2px;
+        }
+        .loginBtn {
+            width: 100%;
+            margin-top: auto;
+
+            //&::before{
+            //	position: absolute;
+            //	top: -32px;
+            //	left: 50%;
+            //	transform: translateX(-50%);
+            //	content: '';
+            //	width: 100%;
+            //	height: 1.5px;
+            //	background: rgba(255,255,255,.08);
+            //}
+        }
+        .oneTab {
+            justify-content: flex-start;
+            align-items: center;
+
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            gap: 16px;
+
+            p {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            img {
+                width: 24px;
+            }
+        }
+    }
+}

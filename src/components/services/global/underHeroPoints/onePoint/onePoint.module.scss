@@ -1,0 +1,260 @@
+@import '/src/styles/variables.scss';
+
+.onePoint {
+	position: relative;
+	width: calc(50% - 12px);
+	height: auto;
+
+	z-index: 1;
+
+	@media screen and (max-width: 860px){
+		width: 100%;
+
+	}
+}
+
+.onePoint[data-active='true'] {
+	z-index: 2;
+}
+
+.onePoint:hover {
+	cursor: pointer;
+}
+
+.onePoint .insidePoint {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	max-height: 112px;
+	transition: max-height $animation1;
+
+	overflow: hidden;
+
+	padding: 32px;
+	backdrop-filter: blur(10px);
+
+	@media screen and (max-width: 520px){
+		padding: 32px 16px;
+	}
+	@media screen and (max-width: 370px){
+		padding: 16px;
+	}
+}
+
+.onePoint[data-active='true'] .insidePoint {
+	max-height: 300px;
+}
+
+.onePoint .insidePoint .mesh {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+
+	width: 128px;
+	height: 110px;
+
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/mesh.png');
+	background-size: 100% 100%;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.onePoint .insidePoint .bg {
+	position: absolute;
+	left: 0px;
+	top: 40px;
+
+	width: 100%;
+	height: calc(100% - 40px - 40px);
+
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/centerBg_1.png');
+	background-size: 100% 100%;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.onePoint .insidePoint .bg::before {
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: -40px;
+	width: 100%;
+	height: 40px;
+
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/topBg_1.png');
+	background-size: 100% 100%;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.onePoint .insidePoint .bg::after {
+	position: absolute;
+	content: '';
+	left: 0px;
+	bottom: -40px;
+	width: 100%;
+	height: 40px;
+
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/bottomBg_1.png');
+	background-size: 100% 100%;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.onePoint[data-bg='2'] .insidePoint .bg {
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/centerBg_2.png');
+	background-size: 100% 100%;
+}
+
+.onePoint[data-bg='2'] .insidePoint .bg::before {
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/topBg_2.png');
+	background-size: 100% 100%;
+}
+
+.onePoint[data-bg='2'] .insidePoint .bg::after {
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/bottomBg_2.png');
+	background-size: 100% 100%;
+}
+
+.onePoint[data-bg='3'] .insidePoint .bg::before {
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/topBg_3.png');
+	background-size: 100% 100%;
+}
+
+.onePoint[data-bg='3'] .insidePoint .bg::after {
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/bottomBg_3.png');
+	background-size: 100% 100%;
+}
+
+.onePoint[data-bg='4'] .insidePoint .bg {
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/centerBg_2.png');
+	background-size: 100% 100%;
+}
+
+.onePoint[data-bg='4'] .insidePoint .bg::before {
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/topBg_4.png');
+	background-size: 100% 100%;
+}
+
+.onePoint[data-bg='4'] .insidePoint .bg::after {
+	background: url('../../../../../assets/images/services/dedicated-gpu-server/underHeroPoints/bottomBg_4.png');
+	background-size: 100% 100%;
+}
+
+.onePoint .insidePoint .topInfo {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	gap: 24px;
+
+	@media screen and (max-width: 520px){
+		padding-right: 24px;
+	}
+}
+
+.onePoint .insidePoint .topInfo .icon {
+	position: relative;
+	width: 48px;
+	min-width: 48px;
+	height: 48px;
+
+	border: 1px solid rgba($color-orange, 0.08);
+	border-radius: 8px;
+
+	transition: border $animation1;
+
+	img {
+		position: absolute;
+		width: 24px;
+		height: auto;
+
+		left: 50%;
+		top: 50%;
+
+		translate: -50% -50%;
+
+		filter: $color-orange-filter;
+	}
+}
+
+.onePoint:hover .insidePoint .topInfo .icon {
+	border: 1px solid rgba($color-orange, 0.25);
+}
+
+.onePoint .insidePoint .topInfo .title {
+	position: relative;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	white-space: pre-wrap;
+}
+
+.onePoint .insidePoint .topInfo .rightArrow {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+
+	right: 20px;
+	top: 50%;
+
+	translate: 0 -50%;
+
+	filter: $color-orange-filter;
+
+	transform: rotate(90deg);
+	transition: transform $animation1;
+}
+
+.onePoint[data-active='true'] .insidePoint .topInfo .rightArrow {
+	transform: rotate(270deg);
+}
+
+.onePoint .insidePoint .line {
+	position: relative;
+	width: 100%;
+	height: 1px;
+
+	margin-top: 32px;
+
+	background: $color-border;
+}
+
+.onePoint .insidePoint .desc {
+	position: relative;
+
+	margin-top: 32px;
+
+	font-family: $font1;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	opacity: 0.5;
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	white-space: pre-wrap;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

@@ -1,0 +1,38 @@
+
+
+
+.subheading{
+  font-size: 24px;
+}
+
+.aboutImage{
+  position: relative;
+  @media screen and (max-width: 905px){
+    img{
+      margin: auto;
+    }
+  }
+}
+
+.aboutImageBg{
+  position: absolute;
+  max-width: unset;
+  left: calc(50% - 16px);
+  transform: translateX(-50%);
+  z-index: -1;
+  top: -200px;
+
+  @media screen and (max-width: 905px){
+    width: 300%;
+    left: 50%;
+    top: -100px;
+  }
+}
+
+.aboutContainer{
+
+  @media screen and (max-width: 905px){
+    flex-direction: column;
+
+  }
+}

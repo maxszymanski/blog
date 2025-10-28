@@ -1,0 +1,118 @@
+@import '/src/styles/variables.scss';
+
+.leftText {
+	position: relative;
+
+	text-align: left;
+	font-family: $font1;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	white-space: pre-wrap;
+}
+
+.line {
+	position: relative;
+	width: 1px;
+	height: 58px;
+
+	background: $color-border;
+}
+
+.locations {
+	position: relative;
+}
+
+.locations .topText {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.locations .topText .topLeftText {
+	position: relative;
+
+	text-align: justify;
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 110%;
+
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.5) 0%,
+		rgba(255, 255, 255, 0.25) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.locations .topText .topRightText {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	p {
+		position: relative;
+		text-align: justify;
+		font-family: $font1;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 110%;
+
+		background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.5) 0%,
+			rgba(255, 255, 255, 0.25) 100%
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	img {
+		position: relative;
+		width: 16px;
+		height: auto;
+
+		border-radius: 1px;
+	}
+}
+
+.locations .bottomText {
+	position: relative;
+	margin-top: 16px;
+
+	text-align: justify;
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 110%;
+
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.5) 0%,
+		rgba(255, 255, 255, 0.25) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

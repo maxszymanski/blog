@@ -1,0 +1,120 @@
+@import '/src/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	margin-top: 120px;
+}
+
+.section .inside .bgShadow {
+	position: absolute;
+	width: 2550px;
+	height: auto;
+
+	left: 50%;
+	top: 50%;
+
+	translate: -50% -50%;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.section .inside .title {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+
+	font-family: $font1;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 115%;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.section .inside .bottom {
+	position: relative;
+	width: 100%;
+	margin-top: 60px;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	row-gap: 48px;
+	justify-content: center;
+
+	align-items: center;
+	align-content: center;
+
+	@media screen and (max-width: 688px){
+		flex-direction: column;
+		row-gap: 24px;
+	}
+}
+
+.section .inside .bottom .line1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+
+	width: 100%;
+	height: 1px;
+
+	background: $color-border;
+	display: none;
+
+
+}
+
+.section .inside .bottom .line1[data-type='one-line'] {
+	top: 50%;
+	translate: 0 -50%;
+	display: block;
+
+	@media screen and (max-width: 688px){
+		display: none;
+	}
+}
+
+.section .inside .bottom .line1[data-type='two-lines'] {
+	top: calc(50% - 65px);
+	translate: 0 -50%;
+	display: block;
+}
+
+.section .inside .bottom .line2 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+
+	width: 100%;
+	height: 1px;
+
+	background: $color-border;
+	display: none;
+}
+
+.section .inside .bottom .line2[data-type='two-lines'] {
+	top: calc(50% + 65px);
+	translate: 0 -50%;
+	display: block;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

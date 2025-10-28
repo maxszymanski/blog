@@ -1,0 +1,248 @@
+@import '/src/styles/variables.scss';
+
+.section {
+  position: relative;
+  width: 100%;
+  z-index: 4;
+}
+
+.section .inside {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 0;
+
+  @media screen and (max-width: 560px){
+    margin-top: 50px;
+  }
+}
+
+.inside .title {
+  position: relative;
+  width: 100%;
+
+  max-width: 650px;
+  margin: 0 auto;
+
+  text-align: center;
+  font-family: $font1;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 115%;
+
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.inside .desc {
+  position: relative;
+  width: 100%;
+
+  max-width: 410px;
+  margin: 0 auto;
+  margin-top: 16px;
+
+  p {
+    text-align: center;
+    font-family: $font1;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    background: linear-gradient(
+                    180deg,
+                    #fff 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    opacity: 0.5;
+  }
+}
+
+.inside .points {
+  position: relative;
+  width: 100%;
+  margin-top: 64px;
+
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}
+
+.onePoint {
+  position: relative;
+  width: 100%;
+  height: 320px;
+
+  padding: 32px;
+
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  @media screen and (max-width: 860px){
+    aspect-ratio: 34/32;
+    height: auto;
+  }
+}
+
+.onePoint .rive {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+
+  object-fit: fill;
+
+  @media screen and (max-width: 860px) {
+    display: none;
+
+  }
+  &Mobile{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    @media screen and (max-width: 860px) {
+      display: block;
+    }
+  }
+
+}
+
+.onePoint[data-loaded='true'] .rive {
+  opacity: 1;
+}
+
+.onePoint .icon {
+  position: relative;
+  width: 32px;
+  height: auto;
+}
+
+.onePoint .pointTitle {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+
+  font-family: $font1;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 1px;
+
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.onePoint .pointDesc {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  margin-top: 16px;
+
+  font-family: $font1;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  opacity: 0.4;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.onePoint[data-number='1'] {
+  background: url('/assets/images/home/features/featuresBg1.png');
+  background-size: 100% 100%;
+}
+
+.onePoint[data-number='2'] {
+  background: url('/assets/images/home/features/featuresBg2.png');
+  background-size: 100% 100%;
+}
+
+.onePoint[data-number='3'] {
+  background: url('/assets/images/home/features/featuresBg3.png');
+  background-size: 100% 100%;
+}
+
+.onePoint[data-number='4'] {
+  background: url('/assets/images/home/features/featuresBg4.png');
+  background-size: 100% 100%;
+}
+
+.onePoint[data-number='5'] {
+  background: url('/assets/images/home/features/featuresBg5.png');
+  background-size: 100% 100%;
+}
+
+.onePoint[data-number='6'] {
+  background: url('/assets/images/home/features/featuresBg6.png');
+  background-size: 100% 100%;
+}
+
+.onePoint[data-loaded='true'] {
+  background: none;
+}
+
+.onePoint[data-type='short'] {
+  width: calc(29.5% - 12px);
+
+  .pointDesc {
+    max-width: 220px;
+  }
+
+  @media screen and (max-width: 865px) {
+    width: calc(50% - 12px);
+  }
+  @media screen and (max-width: 585px) {
+    width: 100%;
+  }
+}
+
+.onePoint[data-type='medium'] {
+  width: calc(40% - 24px);
+
+  .pointDesc {
+    max-width: 355px;
+  }
+
+  @media screen and (max-width: 865px) {
+   width: calc(50% - 12px);
+  }
+  @media screen and (max-width: 585px) {
+    width: 100%;
+  }
+}
+
+.onePoint[data-type='long'] {
+  width: calc(70.5% - 12px);
+
+  .pointDesc {
+    max-width: 455px;
+  }
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

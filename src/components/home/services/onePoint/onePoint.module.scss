@@ -1,0 +1,385 @@
+@import '/src/styles/variables.scss';
+
+.onePoint {
+	position: absolute;
+	width: 100%;
+	max-width: 836px;
+	height: 340px;
+	z-index: 4;
+
+	left: 0px;
+	top: 0px;
+
+	padding: 32px;
+	padding-bottom: 24px;
+
+	background: url('/assets/images/home/services/serviceBg.png');
+	background-size: 100% 100%;
+
+	scale: 0;
+
+	transition: all $animation1;
+
+
+	@media screen and (max-width: 688px){
+		background: unset;
+		height: auto;
+	}
+}
+
+.onePoint::before {
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+
+	background: url('/assets/images/home/services/serviceBgShadow.png');
+	background-size: 100% 100%;
+
+	z-index: -1;
+	pointer-events: none;
+
+	opacity: 0;
+	transition: opacity 0.7s;
+}
+
+.onePoint[data-center='true']::before {
+	opacity: 0.5;
+}
+
+.onePoint[data-center='true']:hover::before {
+	opacity: 1;
+}
+
+.insidePoint {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+
+	@media screen and (max-width: 688px){
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.onePoint[data-center='true'] {
+	position: relative;
+	left: 50%;
+	translate: -50% 0;
+
+	scale: 1;
+
+	.bottomBtn {
+		pointer-events: auto;
+
+		@media screen and (max-width: 688px){
+			margin-top: 24px;
+			margin-bottom: 12px;
+		}
+	}
+}
+
+.onePoint[data-left='true'] {
+	left: calc(50% - 790px);
+	translate: -50% 0;
+
+	scale: 0.74;
+
+	opacity: 1;
+}
+
+.onePoint[data-left='true']:hover {
+	cursor: pointer;
+}
+
+.onePoint[data-right='true'] {
+	left: calc(50% + 790px);
+	translate: -50% 0;
+
+	scale: 0.74;
+
+	opacity: 1;
+}
+
+.onePoint[data-right='true']:hover {
+	cursor: pointer;
+}
+
+.onePoint[data-maxleft='true'] {
+	left: calc(50% - 1000px);
+	translate: -50% 0;
+
+	scale: 0;
+	pointer-events: none;
+}
+
+.onePoint[data-maxright='true'] {
+	left: calc(50% + 1000px);
+	translate: -50% 0;
+
+	scale: 0;
+	pointer-events: none;
+}
+
+.onePoint .priceInfo {
+	position: absolute;
+
+	right: 0px;
+	top: 4px;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%;
+	letter-spacing: 1px;
+
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.5) 0%,
+		rgba(255, 255, 255, 0.25) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	span {
+		background: linear-gradient(
+			180deg,
+			#fff 0%,
+			rgba(255, 255, 255, 0.5) 100%
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		font-size: 24px;
+		line-height: 100%;
+		letter-spacing: 1px;
+	}
+
+	@media screen and (max-width: 688px){
+		position: unset;
+	}
+}
+
+.onePoint .title {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	gap: 24px;
+
+	img {
+		position: relative;
+		width: 32px;
+		height: auto;
+
+		filter: $color-orange-filter;
+	}
+
+	p {
+		position: relative;
+
+		font-family: $font1;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 100%;
+		letter-spacing: 1px;
+
+		background: linear-gradient(
+			180deg,
+			#fff 0%,
+			rgba(255, 255, 255, 0.5) 100%
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	@media screen and (max-width: 688px){
+		flex-wrap: wrap;
+	}
+}
+
+.onePoint .badges {
+	position: relative;
+	margin-top: 24px;
+
+	display: flex;
+	gap: 14px;
+
+	@media screen and (max-width: 688px){
+		margin-top: 12px;
+		margin-bottom: 24px;
+		flex-wrap: wrap;
+	}
+}
+
+.onePoint .badges .category {
+	position: relative;
+	height: 36px;
+
+	padding: 0px 16px;
+	padding-left: 8px;
+
+	border-radius: 8px;
+	border: 1.5px solid rgba($color-orange, 0.08);
+	background: rgba($color-orange, 0.12);
+	backdrop-filter: blur(6px);
+
+	display: flex;
+	gap: 8px;
+	align-items: center;
+
+	p {
+		color: $color-orange;
+		font-family: $font1;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		text-transform: none;
+	}
+
+	img {
+		position: relative;
+		width: 24px;
+		height: auto;
+
+		filter: $color-orange-filter;
+	}
+}
+
+.onePoint .desc {
+	position: relative;
+	width: 100%;
+	margin-top: 24px;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%;
+
+	opacity: 0.4;
+	background: var(
+		--1,
+		linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%)
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.onePoint .texts {
+	position: relative;
+	width: 100%;
+
+	margin-top: 24px;
+
+	display: flex;
+
+	@media screen and (max-width: 688px){
+		flex-direction: column;
+	}
+}
+
+.onePoint .texts .text {
+	position: relative;
+	width: 100%;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%;
+
+	opacity: 0.2;
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	white-space: pre-wrap;
+}
+
+.onePoint .bottomBtn {
+	position: absolute;
+
+	left: 0px;
+	bottom: 20px;
+
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+
+	opacity: 0;
+	pointer-events: none;
+
+	transition: opacity 0.5s, bottom 0.5s;
+
+	@media screen and (max-width: 688px){
+		position: unset;
+		opacity: 1;
+	}
+}
+
+.onePoint[data-center='true']:hover .bottomBtn {
+	bottom: 0px;
+	opacity: 1;
+}
+
+.onePoint .bottomBtn .btn {
+	position: relative;
+	width: 240px;
+	height: 40px;
+
+	border-radius: 8px;
+	border: 1.5px solid rgba($color-orange, 0.08);
+	background: #4b240d;
+	backdrop-filter: blur(6px);
+
+	display: flex;
+	gap: 12px;
+	align-items: center;
+
+	p {
+		color: $color-orange;
+		font-family: $font1;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		text-transform: none;
+	}
+
+	img {
+		position: absolute;
+
+		right: 14px;
+
+		width: 16px;
+		height: auto;
+
+		filter: $color-orange-filter;
+
+		opacity: 1;
+	}
+
+	transition: border $animation1;
+}
+
+.onePoint .bottomBtn .btn:hover {
+	border: 1.5px solid rgba($color-orange, 0.24);
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

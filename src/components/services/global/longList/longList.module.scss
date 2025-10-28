@@ -1,0 +1,46 @@
+@import '/src/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	margin-top: 180px;
+	@media screen and (max-width: 620px){
+		flex-direction: column;
+	}
+}
+
+.section .inside[data-from='torHosting'] {
+	margin-top: 140px;
+}
+
+.section .inside .bgShadow {
+	position: absolute;
+	width: 1324px;
+	height: auto;
+
+	left: 50%;
+	top: 50%;
+
+	translate: -50% -50%;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

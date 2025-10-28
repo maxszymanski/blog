@@ -1,0 +1,231 @@
+@import '/src/styles/variables.scss';
+
+.onePoint {
+	position: relative;
+	width: calc(33.3% - 16px);
+
+	padding: 24px;
+
+	background: url('../../../../../assets/images/services/global/longList/bg_type1.png');
+	background-size: 100% 100%;
+	@media screen and (max-width: 620px){
+		width: 100%;
+	}
+}
+
+.onePoint .mostPopular {
+	position: absolute;
+
+	left: 50%;
+	top: -55px;
+	translate: -50% 0;
+
+	width: 122px;
+	height: auto;
+
+	img {
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.onePoint .title {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	img {
+		position: relative;
+		width: 32px;
+		height: auto;
+
+		filter: $color-orange-filter;
+	}
+
+	p {
+		color: $color-white;
+		font-family: $font1;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 100%;
+		letter-spacing: 1px;
+	}
+}
+
+.onePoint .desc {
+	position: relative;
+	width: 100%;
+	margin-top: 16px;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%;
+
+	opacity: 0.4;
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.onePoint .desc[data-type='orange'] {
+	opacity: 0.4;
+	background: #fb6306;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.onePoint .table {
+	position: relative;
+	width: 100%;
+	margin-top: 12px;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0px;
+}
+
+.onePoint .table .oneRow {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	gap: 6px;
+
+	padding: 12px 0px;
+	border-top: 1px solid $color-border;
+}
+
+.onePoint .table .oneRow:first-child {
+	border-top: none;
+}
+
+.onePoint .table .oneRow .oneText {
+	position: relative;
+
+	font-family: $font1;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%;
+
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.5) 0%,
+		rgba(255, 255, 255, 0.25) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	span {
+		background: linear-gradient(
+			180deg,
+			#fff 0%,
+			rgba(255, 255, 255, 0.5) 100%
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+.onePoint .bottom {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-top: 24px;
+}
+
+.onePoint .bottom .price {
+	position: relative;
+
+	font-family: $font1;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+	letter-spacing: 1px;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	span {
+		background: linear-gradient(
+			180deg,
+			#fff 0%,
+			rgba(255, 255, 255, 0.5) 100%
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		font-size: 16px;
+		opacity: 0.5;
+	}
+}
+
+.onePoint .bottom .button {
+	position: relative;
+}
+
+.onePoint .bottom .button .btn {
+	position: relative;
+	height: 40px;
+
+	padding: 0px 16px;
+	padding-right: 10px;
+
+	border-radius: 8px;
+	border: 1.5px solid rgba($color-orange, 0.08);
+	background: rgba($color-orange, 0.12);
+	backdrop-filter: blur(6px);
+
+	display: flex;
+	gap: 12px;
+	align-items: center;
+
+	p {
+		color: $color-orange;
+		font-family: $font1;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		text-transform: none;
+	}
+
+	img {
+		position: relative;
+		width: 16px;
+		height: auto;
+
+		filter: $color-orange-filter;
+
+		opacity: 1;
+	}
+
+	transition: border $animation1;
+}
+
+.onePoint .bottom .button .btn:hover {
+	border: 1.5px solid rgba($color-orange, 0.24);
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

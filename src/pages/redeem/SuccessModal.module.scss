@@ -1,0 +1,453 @@
+@import "../../styles/variables.scss";
+
+.modalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(17, 15, 15, 0.4);
+    backdrop-filter: blur(50px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        visibility 0s linear 0.4s, backdrop-filter 0.4s ease;
+    padding: 20px;
+    pointer-events: none;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            visibility 0s linear 0s, backdrop-filter 0.3s ease;
+    }
+}
+
+.modalContainer {
+    position: relative;
+    width: 592px;
+    height: 632px;
+    border-radius: 32px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    background: radial-gradient(
+            72.72% 72.72% at 50% 47.19%,
+            rgba(255, 255, 255, 0) 33.78%,
+            rgba(226, 232, 255, 0.02) 100%
+        ),
+        rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(250px);
+    transform: scale(0.7) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+}
+
+.modalWrapper.active .modalContainer {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cardModalImage {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    width: 380px;
+    height: 344px;
+    z-index: 3;
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.05s,
+        opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s;
+
+    canvas {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &.riveLoaded canvas {
+        opacity: 1;
+    }
+}
+
+.modalWrapper.active .cardModalImage {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s,
+        opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+}
+
+.rectangleLightImage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    width: 560px !important;
+    height: 398px !important;
+    max-width: 560px !important;
+    max-height: 398px !important;
+    min-width: 560px !important;
+    min-height: 398px !important;
+    object-fit: contain !important;
+    z-index: 2;
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.modalWrapper.active .rectangleLightImage {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+    transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.15s,
+        opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
+}
+
+.modalContent {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(251, 99, 6, 0.16);
+    background: linear-gradient(
+            180deg,
+            rgba(251, 99, 6, 0.1) 0%,
+            rgba(251, 99, 6, 0) 50%
+        ),
+        linear-gradient(
+            250deg,
+            rgba(48, 26, 14, 0) 0%,
+            rgba(48, 26, 14, 0.15) 99.09%
+        ),
+        linear-gradient(0deg, #110f0f 0%, #110f0f 100%), #fff;
+    overflow: hidden;
+}
+
+.modalLight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.closeButton {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 4;
+    opacity: 0;
+    transform: scale(0.5) rotate(90deg);
+    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &:hover {
+        opacity: 0.7;
+        transform: scale(1.1) rotate(0deg);
+    }
+}
+
+.modalWrapper.active .closeButton {
+    opacity: 0.4;
+    transform: scale(1) rotate(0deg);
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s,
+        transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+
+    &:hover {
+        opacity: 0.7;
+        transform: scale(1.1) rotate(0deg);
+    }
+}
+
+.modalTextContent {
+    position: absolute;
+    top: 240px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    padding: 0 16px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s,
+        transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+}
+
+.modalWrapper.active .modalTextContent {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s,
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+}
+
+.modalHeading {
+    font-family: "Inter", sans-serif !important;
+    font-size: 48px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 56px !important;
+    text-align: center !important;
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        rgba(255, 255, 255, 0.5) 100%
+    ) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    margin-bottom: 32px !important;
+}
+
+.modalSubheading {
+    font-family: "Inter", sans-serif !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: normal !important;
+    text-align: center !important;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.25) 100%
+    ) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    margin-bottom: 44px !important;
+}
+
+.modalRedeemButton {
+    width: 100% !important;
+    height: 48px !important;
+    border-radius: 12px !important;
+    border: 1.5px solid rgba(251, 99, 6, 0.08) !important;
+    background: rgba(251, 99, 6, 0.12) !important;
+    text-transform: none !important;
+    margin-bottom: 16px !important;
+    padding: 0 33px !important;
+
+    &:hover {
+        background: rgba(251, 99, 6, 0.16) !important;
+    }
+}
+
+.modalButtonText {
+    color: #fb6306 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+    text-align: center !important;
+}
+
+.modalBackButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.25) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.3s ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0.25) 100%
+        );
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .modalWrapper {
+        padding: 10px;
+    }
+
+    .modalContainer {
+        width: 95%;
+        max-width: 520px;
+        height: auto;
+        min-height: 600px;
+        border-radius: 24px;
+    }
+
+    .cardModalImage {
+        width: 300px;
+        top: -90px;
+    }
+
+    .modalWrapper.active .cardModalImage {
+        transform: translateX(-50%) scale(1);
+    }
+
+    .rectangleLightImage {
+        scale: 1;
+        height: auto;
+        top: -30px;
+    }
+
+    .modalWrapper.active .rectangleLightImage {
+        transform: translateX(-50%) scale(0.75);
+    }
+
+    .modalContent {
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        border-radius: 12px;
+    }
+
+    .closeButton {
+        top: 24px;
+        right: 24px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .modalTextContent {
+        top: 240px;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        padding: 0 12px;
+    }
+
+    .modalHeading {
+        font-size: 36px !important;
+        line-height: 42px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .modalSubheading {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 32px !important;
+    }
+
+    .modalRedeemButton {
+        margin-bottom: 12px !important;
+        padding: 0 24px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .modalWrapper {
+        padding: 15px;
+    }
+
+    .modalContainer {
+        width: 100%;
+        max-width: 380px;
+        min-height: 520px;
+        border-radius: 20px;
+    }
+
+    .cardModalImage {
+        width: 300px;
+        top: -92px;
+    }
+
+    .modalWrapper.active .cardModalImage {
+        transform: translateX(-50%) scale(1);
+    }
+
+    .modalContent {
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        border-radius: 12px;
+    }
+
+    .closeButton {
+        top: 20px;
+        right: 20px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .modalTextContent {
+        top: 200px;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        padding: 0 16px;
+    }
+
+    .modalHeading {
+        font-size: 28px !important;
+        line-height: 34px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .modalSubheading {
+        font-size: 13px !important;
+        line-height: 18px !important;
+        margin-bottom: 28px !important;
+    }
+
+    .modalRedeemButton {
+        height: 44px !important;
+        margin-bottom: 10px !important;
+        padding: 0 20px !important;
+    }
+
+    .modalButtonText {
+        font-size: 15px !important;
+    }
+
+    .modalBackButton {
+        font-size: 14px !important;
+    }
+}

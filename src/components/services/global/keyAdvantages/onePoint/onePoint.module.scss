@@ -1,0 +1,132 @@
+@import '/src/styles/variables.scss';
+
+.outside {
+	position: relative;
+	width: calc(50% - 48px);
+
+	@media screen and (max-width: 620px){
+		width: 100%;
+	}
+}
+
+.onePoint {
+	position: relative;
+	width: 100%;
+	max-height: 40px;
+	overflow: hidden;
+
+	padding-bottom: 0px;
+
+	transition: max-height $animation1, padding-bottom $animation1;
+}
+
+.onePoint:hover {
+	cursor: pointer;
+}
+
+.onePoint::before {
+	position: absolute;
+	content: '';
+
+	left: 0px;
+	bottom: 0px;
+
+	width: calc(100% - 42px);
+	height: 1px;
+	background: rgba($color-white, 0.12);
+}
+
+.onePoint .rightCurve {
+	position: absolute;
+	width: 42px;
+	height: auto;
+
+	right: 0px;
+	bottom: 0px;
+}
+
+.onePoint .top {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	gap: 24px;
+	align-items: center;
+}
+
+.onePoint .top .icon {
+	position: relative;
+	width: 24px;
+	height: auto;
+
+	filter: $color-orange-filter;
+}
+
+.onePoint .top .title {
+	position: relative;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.onePoint .top .rightArrow {
+	transition: .3s;
+	position: absolute;
+
+	right: 24px;
+	top: 8px;
+
+	width: 14px;
+	height: auto;
+
+	filter: $color-white-filter;
+	opacity: 0.4;
+
+	transform: rotate(90deg);
+}
+
+.onePoint[data-active='true'] {
+	max-height: 100px;
+	padding-bottom: 14px;
+
+	.desc {
+		opacity: 0.5;
+	}
+
+	.rightArrow{
+		transform: rotate(270deg);
+	}
+}
+
+.onePoint .desc {
+	position: relative;
+	width: calc(100% - 24px - 24px);
+	margin-left: 48px;
+	margin-top: 8px;
+
+	font-family: $font1;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	transition: opacity $animation1;
+
+	opacity: 0;
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

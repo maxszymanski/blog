@@ -1,0 +1,28 @@
+@import '/src/styles/variables.scss';
+
+.leftText {
+	position: relative;
+	width: 100%;
+
+	text-align: left;
+	font-family: $font1;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	white-space: pre-wrap;
+
+	@media screen and (max-width: 620px){
+		text-align: center;
+	}
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

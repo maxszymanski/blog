@@ -1,0 +1,253 @@
+@import '/src/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	padding: 32px;
+
+	margin-top: 140px;
+
+	background: url('../../../../assets/images/services/global/offer/offerBg.png');
+	background-size: 100% 100%;
+}
+
+.inside .top {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	gap: 48px;
+	@media screen and (max-width: 820px){
+		gap: 24px;
+		flex-direction: column;
+	}
+}
+
+.inside .top .title {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	img {
+		position: relative;
+		width: 32px;
+		height: auto;
+
+		filter: $color-orange-filter;
+	}
+
+	p {
+		color: $color-white;
+		font-family: $font1;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 100%;
+		letter-spacing: 1px;
+
+		white-space: pre-wrap;
+	}
+}
+
+.inside .top .button {
+	position: relative;
+}
+
+.inside .top .button .btn {
+	position: relative;
+	height: 40px;
+
+	padding: 0px 16px;
+	padding-right: 10px;
+
+	border-radius: 8px;
+	border: 1.5px solid rgba($color-orange, 0.08);
+	background: rgba($color-orange, 0.12);
+	backdrop-filter: blur(6px);
+
+	display: flex;
+	gap: 12px;
+	align-items: center;
+
+	p {
+		color: $color-orange;
+		font-family: $font1;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		text-transform: none;
+	}
+
+	img {
+		position: relative;
+		width: 16px;
+		height: auto;
+
+		filter: $color-orange-filter;
+
+		opacity: 1;
+	}
+
+	transition: border $animation1;
+}
+
+.inside .top .button .btn:hover {
+	border: 1.5px solid rgba($color-orange, 0.24);
+}
+
+.inside .price {
+	position: absolute;
+	right: 32px;
+	top: 32px;
+
+	font-family: $font1;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 80%;
+	letter-spacing: 1px;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	@media screen and (max-width: 820px){
+		position: unset;
+		order: 5;
+		text-align: center;
+		margin-top: 18px;
+	}
+
+	span {
+		background: linear-gradient(
+			180deg,
+			#fff 0%,
+			rgba(255, 255, 255, 0.5) 100%
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		font-size: 16px;
+		opacity: 0.5;
+	}
+}
+
+.inside .desc {
+	position: relative;
+	width: 100%;
+	margin-top: 16px;
+
+	color: $color-orange;
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 120%;
+
+	opacity: 0.4;
+
+	white-space: pre-wrap;
+
+	@media screen and (max-width: 820px){
+		text-align: center;
+	}
+}
+
+.inside .list {
+	position: relative;
+	width: 100%;
+
+	margin-top: 32px;
+	padding-top: 32px;
+
+	border-top: 1px solid $color-border;
+
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	@media screen and (max-width: 820px){
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		padding-top: 18px;
+		margin-top: 18px;
+	}
+}
+
+.inside .list[data-type='mr-65px'] {
+	.oneElement {
+		position: relative;
+		margin-right: 65px;
+	}
+}
+
+.inside .list .line {
+	position: relative;
+	width: 1px;
+	height: 54px;
+
+	background: $color-border;
+
+	@media screen and (max-width: 820px){
+		display: none;
+	}
+}
+
+.inside .list .oneElement {
+	position: relative;
+}
+
+.inside .list .oneElement .name {
+	position: relative;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	opacity: 0.5;
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	@media screen and (max-width: 820px){
+		text-align: center;
+	}
+}
+
+.inside .list .oneElement .value {
+	position: relative;
+	margin-top: 6px;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

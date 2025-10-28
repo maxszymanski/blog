@@ -1,0 +1,31 @@
+@import '/src/styles/variables.scss';
+
+.desc {
+	position: relative;
+	width: 100%;
+
+	margin-top: 24px;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.5) 0%,
+		rgba(255, 255, 255, 0.25) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	white-space: pre-wrap;
+
+	max-width: 770px;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

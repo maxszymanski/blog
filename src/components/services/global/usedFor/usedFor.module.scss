@@ -1,0 +1,437 @@
+@import '/src/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	margin-top: 125px;
+}
+
+.section .inside .bgShadow {
+	position: absolute;
+	width: 2553px;
+	height: auto;
+
+	left: 50%;
+	top: 50%;
+
+	translate: -50% -50%;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.section .inside .title {
+	position: relative;
+	width: 100%;
+	max-width: 550px;
+	margin: 0 auto;
+
+	text-align: center;
+	font-family: $font1;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 115%;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.section .inside .bottom {
+	position: relative;
+	width: 100%;
+	margin-top: 8px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.section .inside .bottom .left {
+	position: relative;
+	display: flex;
+	gap: 16px;
+	flex-direction: column;
+}
+
+.section .inside .bottom .left .onePoint {
+	position: relative;
+	width: 500px;
+
+	padding: 24px;
+	display: flex;
+	align-items: center;
+	gap: 32px;
+
+	background: url('../../../../assets/images/services/global/usedFor/pointBg.png');
+	background-size: 100% 100%;
+
+	transition: margin-left $animation1;
+
+	@media screen and (max-width: 620px){
+		width: 100%;
+		padding: 16px;
+	}
+}
+
+.section .inside .bottom .left .onePoint[data-type='rounded'] {
+	background: url('../../../../assets/images/services/global/usedFor/roundedBg1.png');
+	background-size: 100% 100%;
+
+	.texts {
+		width: 100%;
+		left: -24px;
+
+		.pointTitle {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+.section .inside .bottom .left .onePoint[data-type='rounded'][data-number='2'] {
+	background: url('../../../../assets/images/services/global/usedFor/roundedBg2.png');
+	background-size: 100% 100%;
+}
+
+.section .inside .bottom .left .onePoint[data-hovered='true'] {
+	margin-left: 76px;
+}
+
+.section .inside .bottom .left .onePoint .icon {
+	position: relative;
+	width: 48px;
+	min-width: 48px;
+	height: 48px;
+
+	margin-left: 8px;
+
+	border: 1px solid rgba($color-orange, 0.08);
+	border-radius: 8px;
+
+	img {
+		position: absolute;
+		width: 24px;
+		height: auto;
+
+		left: 50%;
+		top: 50%;
+
+		translate: -50% -50%;
+
+		filter: $color-orange-filter;
+	}
+}
+
+.section .inside .bottom .left .onePoint .texts {
+	position: relative;
+}
+
+.section .inside .bottom .left .onePoint .texts .pointTitle {
+	position: relative;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.section .inside .bottom .left .onePoint .texts .desc {
+	position: relative;
+	margin-top: 8px;
+	max-width: 340px;
+
+	font-family: $font1;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	opacity: 0.5;
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.section .inside .bottom .right {
+	position: relative;
+	@media screen and (max-width: 620px){
+		display: none;
+	}
+}
+
+.section .inside .bottom .right .rightImg {
+	position: relative;
+	width: 100%;
+	max-width: 452px;
+	height: auto;
+
+	.topImg {
+		position: relative;
+		width: 100%;
+		height: auto;
+
+		z-index: 2;
+	}
+
+	.bottomImg {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: auto;
+
+		z-index: 5;
+	}
+}
+
+.section .inside .bottom .right .rightImg .mask {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: calc(100% - 6px);
+
+	-webkit-mask-image: url('../../../../assets/images/services/global/usedFor/rightImgMask.png');
+	mask-image: url('../../../../assets/images/services/global/usedFor/rightImgMask.png');
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
+
+	z-index: -1;
+}
+
+.section .inside .bottom .right .rightImg .noMask {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: calc(100% - 6px);
+
+	z-index: 1;
+}
+
+.section .inside .bottom .right .rightImg .dot {
+	position: absolute;
+	left: 51%;
+	top: 30%;
+	width: 12px;
+	height: 12px;
+
+	background: $color-orange;
+	border-radius: 100%;
+
+	transition: all $animation1;
+
+	animation: dotAnim 30s infinite linear;
+}
+
+.section .inside .bottom .right .rightImg .dot[data-number='2'] {
+	animation-delay: -15s;
+}
+
+@keyframes dotAnim {
+	0% {
+		left: 51%;
+		top: 30%;
+	}
+
+	5% {
+		left: 51%;
+		top: 10%;
+	}
+
+	6% {
+		left: 53%;
+		top: 8%;
+	}
+
+	10% {
+		left: 65%;
+		top: 8%;
+	}
+
+	15% {
+		left: 90%;
+		top: 8%;
+	}
+
+	16% {
+		left: 92.7%;
+		top: 10%;
+	}
+
+	20% {
+		left: 92.7%;
+		top: 28%;
+	}
+
+	25% {
+		left: 92.7%;
+		top: 47.5%;
+	}
+
+	26% {
+		left: 90%;
+		top: 50.8%;
+	}
+
+	32% {
+		left: 60%;
+		top: 50.8%;
+	}
+
+	44% {
+		left: 5.7%;
+		top: 50.8%;
+	}
+
+	49% {
+		left: 5.7%;
+		top: 76%;
+	}
+
+	54% {
+		left: 23%;
+		top: 93%;
+	}
+
+	59% {
+		left: 37%;
+		top: 93%;
+	}
+
+	61% {
+		left: 43%;
+		top: 88%;
+	}
+
+	69% {
+		left: 87.8%;
+		top: 88%;
+	}
+
+	77% {
+		left: 87.8%;
+		top: 33%;
+	}
+
+	78% {
+		left: 89.8%;
+		top: 29.7%;
+	}
+
+	79% {
+		left: 92.7%;
+		top: 29.7%;
+	}
+
+	84% {
+		left: 92.7%;
+		top: 47.5%;
+	}
+
+	85% {
+		left: 90%;
+		top: 50.8%;
+	}
+
+	92% {
+		left: 51%;
+		top: 50.8%;
+	}
+
+	100% {
+		left: 51%;
+		top: 30%;
+	}
+}
+
+.section .inside .bottom .right .rightImg .dot::before {
+	position: absolute;
+	content: '';
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	width: 12px;
+	height: 12px;
+
+	background: $color-orange;
+	border-radius: 100%;
+
+	opacity: 1;
+	filter: blur(10px);
+}
+
+.section .inside .bottom .right .rightImg .dot[data-type='mask']::before {
+	width: 32px;
+	height: 32px;
+	filter: blur(5px);
+}
+
+.section .inside .bottom .right .rightImg .point1Hover {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+
+	left: 0px;
+	top: 204px;
+
+	z-index: 15;
+}
+
+.section .inside .bottom .right .rightImg .point1Hover:hover {
+	cursor: pointer;
+}
+
+.section .inside .bottom .right .rightImg .point2Hover {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+
+	right: 0px;
+	bottom: 6px;
+
+	z-index: 15;
+}
+
+.section .inside .bottom .right .rightImg .point2Hover:hover {
+	cursor: pointer;
+}
+
+.section .inside .bottom .right .rightImg .point3Hover {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+
+	right: 108px;
+	top: 0px;
+
+	z-index: 15;
+}
+
+.section .inside .bottom .right .rightImg .point3Hover:hover {
+	cursor: pointer;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

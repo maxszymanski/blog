@@ -1,0 +1,107 @@
+@import '/src/styles/variables.scss';
+
+.onePoint {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	@media screen and (max-width: 860px){
+		margin-bottom: 16px;
+	}
+}
+
+.onePoint .line {
+	position: relative;
+	width: 1px;
+	height: 48px;
+
+	margin-right: 8px;
+
+	background: $color-border;
+
+	@media screen and (max-width: 860px){
+		display: none;
+	}
+}
+
+.onePoint .icon {
+	position: relative;
+	width: 48px;
+	min-width: 48px;
+	height: 48px;
+
+	border-radius: 8px;
+	border: 1px solid rgba($color-orange, 0.08);
+	background: linear-gradient(
+		180deg,
+		rgba($color-orange, 0.04) 0%,
+		rgba($color-orange, 0) 100%
+	);
+
+	img {
+		position: absolute;
+		width: 24px;
+		height: auto;
+
+		left: 50%;
+		top: 50%;
+		translate: -50% -50%;
+
+		filter: $color-orange-filter;
+	}
+}
+
+.onePoint .text {
+	position: relative;
+
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	white-space: pre-wrap;
+}
+
+.onePoint[data-type='2-rows'] {
+	width: 100%;
+}
+
+.onePoint:first-child[data-type='2-rows'] {
+	min-width: 30%;
+	width: 30%;
+
+	@media screen and (max-width: 860px){
+		width: 100%;
+	}
+}
+
+.onePoint:last-child[data-type='2-rows'] {
+	min-width: 30%;
+	width: 30%;
+	@media screen and (max-width: 860px){
+		width: 100%;
+	}
+}
+
+.onePoint[data-type='3-rows-2-full'] {
+	width: 100%;
+}
+
+.onePoint[data-type='3-rows-2-full'][data-row='row3'] {
+	width: auto;
+}
+
+.onePoint[data-type='3-rows-3-full'] {
+	width: 100%;
+}
+
+// RWD
+@media (max-width: 1150px) {
+}

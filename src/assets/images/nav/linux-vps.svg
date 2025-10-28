@@ -1,0 +1,51 @@
+<svg width="724" height="343" viewBox="0 0 724 343" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.3137 1.25H714C718.832 1.25 722.75 5.16751 722.75 10V319.686C722.75 322.007 721.828 324.233 720.187 325.873L713.873 332.187C712.233 333.828 710.007 334.75 707.686 334.75H10C5.16754 334.75 1.25 330.832 1.25 326V16.3137C1.25 13.9931 2.17188 11.7675 3.81281 10.1265L10.1265 3.81281C11.7675 2.17187 13.993 1.25 16.3137 1.25Z" stroke="white" stroke-opacity="0.08" stroke-width="1.5"/>
+<g clip-path="url(#clip0_2015_423)">
+<rect x="238" y="74" width="336" height="342" rx="48" fill="white" fill-opacity="0.01"/>
+<rect x="238.75" y="74.75" width="334.5" height="340.5" rx="47.25" stroke="white" stroke-opacity="0.04" stroke-width="1.5"/>
+<rect x="286" y="198" width="240" height="100" rx="12" fill="white" fill-opacity="0.02"/>
+<rect x="286.75" y="198.75" width="238.5" height="98.5" rx="11.25" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<rect x="298.75" y="210.75" width="214.5" height="74.5" rx="3.25" stroke="white" stroke-opacity="0.08" stroke-width="1.5"/>
+<rect x="298.75" y="134.75" width="214.5" height="38.5" rx="3.25" stroke="white" stroke-opacity="0.08" stroke-width="1.5"/>
+<rect x="298.75" y="322.75" width="214.5" height="38.5" rx="3.25" stroke="white" stroke-opacity="0.08" stroke-width="1.5"/>
+<rect x="286" y="122" width="240" height="64" rx="12" fill="white" fill-opacity="0.02"/>
+<rect x="286.75" y="122.75" width="238.5" height="62.5" rx="11.25" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<rect x="286" y="310" width="240" height="64" rx="12" fill="white" fill-opacity="0.02"/>
+<rect x="286.75" y="310.75" width="238.5" height="62.5" rx="11.25" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<rect x="270.75" y="106.75" width="270.5" height="282.5" rx="23.25" stroke="white" stroke-opacity="0.08" stroke-width="1.5"/>
+<rect x="190.75" y="26.75" width="430.5" height="436.5" rx="79.25" stroke="url(#paint0_linear_2015_423)" stroke-opacity="0.08" stroke-width="1.5"/>
+<rect x="142.75" y="-21.25" width="526.5" height="532.5" rx="119.25" stroke="url(#paint1_linear_2015_423)" stroke-opacity="0.08" stroke-width="1.5"/>
+<rect x="325" y="238" width="161" height="20" rx="4" fill="white" fill-opacity="0.16"/>
+<path d="M318 186L318 198" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<path d="M330 186L330 198" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<path d="M342 186L342 198" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<path d="M354 186L354 198" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<path d="M458 298L458 310" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<path d="M470 298L470 310" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<path d="M482 298L482 310" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<path d="M494 298L494 310" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+<path d="M574 310L722 310" stroke="white" stroke-opacity="0.04" stroke-width="1.5"/>
+<path d="M574 262L722 262" stroke="white" stroke-opacity="0.04" stroke-width="1.5"/>
+<path d="M574 214L722 214" stroke="white" stroke-opacity="0.04" stroke-width="1.5"/>
+<path d="M574 166L722 166" stroke="white" stroke-opacity="0.04" stroke-width="1.5"/>
+</g>
+<path d="M2 310L238 310" stroke="white" stroke-opacity="0.04" stroke-width="1.5"/>
+<path d="M2 262L238 262" stroke="white" stroke-opacity="0.04" stroke-width="1.5"/>
+<path d="M2 214L238 214" stroke="white" stroke-opacity="0.04" stroke-width="1.5"/>
+<path d="M2 166L238 166" stroke="white" stroke-opacity="0.04" stroke-width="1.5"/>
+<defs>
+<linearGradient id="paint0_linear_2015_423" x1="190" y1="26" x2="569" y2="335" gradientUnits="userSpaceOnUse">
+<stop offset="0.05" stop-color="white" stop-opacity="0"/>
+<stop offset="0.495" stop-color="white"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2015_423" x1="492.723" y1="-22" x2="492.723" y2="525.69" gradientUnits="userSpaceOnUse">
+<stop offset="0.2" stop-color="white" stop-opacity="0"/>
+<stop offset="0.495" stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_2015_423">
+<rect width="632" height="332" fill="white" transform="translate(90 2)"/>
+</clipPath>
+</defs>
+</svg>
