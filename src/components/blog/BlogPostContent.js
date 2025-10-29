@@ -2,6 +2,7 @@ import styles from './BlogPostContent.module.css'
 import ContentImage from '../../assets/images/blog/content-image.png'
 import BlogFaq from './BlogFaq'
 import { Link } from 'react-router-dom'
+import Dots from 'components/overlay/dots/dots'
 
 const links = [
 	{ name: 'Best VPS hosting – detailed review', slug: 'best-vps-hosting' },
@@ -13,6 +14,7 @@ function BlogPostContent() {
 	return (
 		<section className="section">
 			<div className={`inside ${styles.container}`}>
+				<Dots type="content-one" />
 				<div className={styles.tableBox}>
 					<h3 className={styles.tableTitle}>Table of contents</h3>
 

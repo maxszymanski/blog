@@ -551,6 +551,64 @@ export default function Dots(props) {
 					))}
 				</>
 			) : null}
+			{props.type === 'content-one' ? (
+				<>
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="empty" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="empty" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="empty" key={i} />
+					))}
+					{[...Array(6)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(6)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(6)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(6)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(6)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(6)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="empty" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="empty" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="empty" key={i} />
+					))}
+					{[...Array(3)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+				</>
+			) : null}
 			{props.type === 'home-features1' ? (
 				<>
 					{[...Array(4)].map((x, i) => (
