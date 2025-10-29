@@ -22,11 +22,19 @@
 	}
 }
 
+.contentImageBox {
+	overflow: hidden;
+	border-radius: 16px;
+	max-height: 400px;
+	width: 100%;
+	margin-top: 32px;
+}
+
 .contentImage {
 	width: 100%;
 	height: auto;
 	max-height: 400px;
-	margin-top: 32px;
+	transition: transform 0.5s;
 }
 .tableBox {
 	display: flex;
@@ -78,4 +86,8 @@
 	@media screen and (min-width: 1024px) {
 		flex-direction: row;
 	}
+}
+
+.contentImageBox:hover .contentImage {
+	transform: scale(103%);
 }

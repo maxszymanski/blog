@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
-import styles from './PostCard.module.css'
+import styles from './PostCard.module.scss'
 import Fire from '../../assets/images/blog/fire.svg'
 import { Typography } from '@mui/material'
 import Clock from '../../assets/images/blog/clock.svg'
 import Logo from '../../assets/images/blog/logo.svg'
+import arrow_right from '../../assets/icons/arrow_right.svg'
 
 function LargeCard({ card }) {
 	return (
@@ -25,6 +26,12 @@ function LargeCard({ card }) {
 						</p>
 					</div>
 				</div>
+			</div>
+			<div className={styles.bottomBtn}>
+				<p className={styles.btn}>
+					<Typography>View more</Typography>
+					<img src={arrow_right} alt="" />
+				</p>
 			</div>
 		</Link>
 	)

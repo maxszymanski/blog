@@ -1,4 +1,4 @@
-import styles from './PostCard.module.css'
+import styles from './PostCard.module.scss'
 
 import Fire from '../../assets/images/blog/fire.svg'
 import { Typography } from '@mui/material'

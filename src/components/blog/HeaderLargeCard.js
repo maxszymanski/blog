@@ -1,4 +1,4 @@
-import styles from './PostCard.module.css'
+import styles from './PostCard.module.scss'
 import Logo from '../../assets/images/blog/logo.svg'
 import Clock from '../../assets/images/blog/clock.svg'
 import Fire from '../../assets/images/blog/fire.svg'

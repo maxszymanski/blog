@@ -1,9 +1,10 @@
-import styles from './PostCard.module.css'
+import styles from './PostCard.module.scss'
 import Logo from '../../assets/images/blog/logo.svg'
 import Clock from '../../assets/images/blog/clock.svg'
 import Fire from '../../assets/images/blog/fire.svg'
 import { Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
+import arrow_right from '../../assets/icons/arrow_right.svg'
 function PostCard({ card }) {
 	return (
 		<Link className={styles.card} to={`/blog/${card.slug}`} data-aos="fade-up">
@@ -30,6 +31,12 @@ function PostCard({ card }) {
 						</div>
 					</div>
 				</div>
+			</div>
+			<div className={styles.bottomBtn}>
+				<p className={styles.btn}>
+					<Typography>View more</Typography>
+					<img src={arrow_right} alt="" />
+				</p>
 			</div>
 		</Link>
 	)

@@ -1,4 +1,4 @@
-import styles from './PostCard.module.css'
+import styles from './PostCard.module.scss'
 import HeaderPostCard from './HeaderPostCard'
 import HeaderLargeCard from './HeaderLargeCard'
 

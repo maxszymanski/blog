@@ -45,7 +45,9 @@ function BlogPostContent() {
 						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
-					<img src={ContentImage} alt="blog security" className={styles.contentImage} />
+					<div className={styles.contentImageBox}>
+						<img src={ContentImage} alt="blog security" className={styles.contentImage} />
+					</div>
 					<h3 className={`text-decorated ${styles.title}`}>H3 - PrivateAlps</h3>
 					<p className={`text-decorated ${styles.subtitle}`}>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
