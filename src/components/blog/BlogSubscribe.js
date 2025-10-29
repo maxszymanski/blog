@@ -1,6 +1,6 @@
 import Dots from 'components/overlay/dots/dots'
 import styles from './BlogSubscribe.module.css'
-import { Button, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 
 function BlogSubscribe() {
 	return (
@@ -16,9 +16,13 @@ function BlogSubscribe() {
 					<p className={`text-decorated-blog text-center`}>We post fresh content every week.</p>
 					<form className={styles.subscribeForm}>
 						<input className={styles.subscribeInput} placeholder="Enter your email address" />
-						<Button data-aos="fade-up" className={`btn ${styles.formBtn}`} onClick={() => {}} disableRipple>
+						<button
+							data-aos="fade-up"
+							className={`btn-blog  ${styles.formBtn}`}
+							onClick={() => {}}
+							disableRipple>
 							<Typography>Subscribe</Typography>
-						</Button>
+						</button>
 					</form>
 				</div>
 			</div>

@@ -199,6 +199,48 @@ p.text {
 		border: 1.5px solid rgba($color-orange, 0.24);
 	}
 }
+.btn-blog {
+	position: relative;
+	height: 40px;
+	padding: 0px 16px;
+
+	border-radius: 8px;
+	border: 1.5px solid rgba($color-orange, 0.08);
+	background: rgba($color-orange, 0.12);
+	backdrop-filter: blur(6px);
+	display: flex;
+	gap: 12px;
+	align-items: center;
+
+	gap: 8px !important;
+	width: fit-content;
+
+	p {
+		color: $color-orange;
+		font-family: $font1;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		text-transform: none;
+	}
+
+	img {
+		position: relative;
+		width: 16px;
+		height: auto;
+
+		filter: $color-orange-filter;
+
+		opacity: 1;
+	}
+
+	transition: border $animation1;
+
+	&:hover {
+		border: 1.5px solid rgba($color-orange, 0.24);
+	}
+}
 
 .btn-secondary {
 	position: relative;

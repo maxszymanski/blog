@@ -22,96 +22,11 @@
 		height: 430px;
 	}
 }
-.bottomBtn .btn {
-	position: relative;
-	width: 240px;
-	height: 40px;
-	text-align: center;
 
-	border-radius: 8px;
-	border: 1.5px solid rgba($color-orange, 0.08);
-	background: #4b240d;
-	backdrop-filter: blur(6px);
-
-	display: flex;
-	gap: 12px;
-	align-items: center;
-	justify-content: center;
-
-	p {
-		color: $color-orange;
-		font-family: $font1;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 600;
-		line-height: normal;
-		text-transform: none;
-	}
-
-	img {
-		position: absolute;
-
-		right: 14px;
-
-		width: 16px;
-		height: auto;
-
-		filter: $color-orange-filter;
-
-		opacity: 1;
-	}
-
-	transition: border $animation1;
-}
-
-.bottomBtn {
-	position: absolute;
-
-	left: 0px;
-	bottom: 0px;
-	height: 100%;
-	width: 100%;
-
-	display: flex;
-	justify-content: center;
-	align-items: end;
-	padding-bottom: 20px;
-	background: linear-gradient(180deg, rgba(251, 99, 6, 0.3) 0, rgba(251, 99, 6, 0) 100%);
-
-	opacity: 0;
-	pointer-events: none;
-
-	transition: opacity 0.5s, bottom 0.5s;
-
-	@media screen and (max-width: 1024px) {
-		display: none;
-	}
-}
-
-.card:hover .bottomBtn {
-	opacity: 1;
-}
 .card:hover .cardHero {
 	transform: scale(103%);
 }
-.largeCard:hover .bottomBtn {
-	opacity: 1;
-}
-.largeCard:hover .cardHero {
-	transform: scale(103%);
-}
 
-.btn:hover {
-	border: 1.5px solid rgba($color-orange, 0.24);
-}
-
-.cardHero {
-	transition: transform 0.5s;
-}
-
-.imageBox {
-	position: relative;
-}
 .cardInfoBox {
 	display: flex;
 	align-items: center;
@@ -186,17 +101,24 @@
 .largeCard {
 	display: none;
 	background-image: url('../../assets/images/blog/large-card.png');
+	// background-size: 100% 100%;
 	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
 	width: 100%;
 	padding: 32px;
-	border-radius: 15px 15px 0 0;
+	border-radius: 15px;
 	overflow: hidden;
+	transition: all 0.5s !important;
 
 	@media screen and (min-width: 1024px) {
 		height: 340px;
 		display: block;
 		margin-bottom: 48px;
 	}
+}
+.largeCard:hover {
+	background-size: 103% 103%;
 }
 
 .cardLargeText {
@@ -215,12 +137,17 @@
 	opacity: 8%;
 }
 
+.imageBox {
+	position: relative;
+}
+
 .cardHero {
 	width: 100%;
 	height: auto;
 	max-height: 250px;
 	object-fit: cover;
 	position: relative;
+	transition: transform 0.5s;
 }
 
 .largeCardPost {
@@ -373,6 +300,7 @@
 }
 .cardLogos {
 	position: relative;
+	flex-shrink: 0;
 }
 
 .ratingBox {

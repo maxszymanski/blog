@@ -4,12 +4,11 @@ import Fire from '../../assets/images/blog/fire.svg'
 import { Typography } from '@mui/material'
 import Clock from '../../assets/images/blog/clock.svg'
 import Logo from '../../assets/images/blog/logo.svg'
-import arrow_right from '../../assets/icons/arrow_right.svg'
 
 function LargeCard({ card }) {
 	return (
 		<Link to={`/blog/${card.slug}`} className={styles.largeCard} data-aos="fade-right">
-			<p className="btn btn-card ">
+			<p className="btn-blog ">
 				{card.category === 'Popular' && <img alt="fire icon" width={24} height={24} src={Fire} />}
 				<Typography>{card.category}</Typography>
 			</p>
@@ -26,12 +25,6 @@ function LargeCard({ card }) {
 						</p>
 					</div>
 				</div>
-			</div>
-			<div className={styles.bottomBtn}>
-				<p className={styles.btn}>
-					<Typography>View more</Typography>
-					<img src={arrow_right} alt="" />
-				</p>
 			</div>
 		</Link>
 	)

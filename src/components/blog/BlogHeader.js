@@ -28,7 +28,7 @@ function BlogHeader({ setSelectedCategory, listRef }) {
 						<Button
 							key={category}
 							data-aos="fade-up"
-							className={`btn btn-blog btn-card`}
+							className={`btn-blog `}
 							onClick={() => {
 								setSelectedCategory(category)
 								if (listRef.current) {
