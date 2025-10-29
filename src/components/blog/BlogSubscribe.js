@@ -19,7 +19,10 @@ function BlogSubscribe() {
 						<button
 							data-aos="fade-up"
 							className={`btn-blog  ${styles.formBtn}`}
-							onClick={() => {}}
+							onClick={e => {
+								e.preventDefault()
+							}}
+							type="button"
 							disableRipple>
 							<Typography>Subscribe</Typography>
 						</button>
