@@ -24,7 +24,7 @@ const socials = [
 	},
 ]
 
-function BlogAuthorHeader() {
+function BlogAuthorHeader({ card }) {
 	return (
 		<header className="section">
 			<div className="inside">
@@ -34,16 +34,14 @@ function BlogAuthorHeader() {
 					</div>
 					<div className={styles.authorBox} data-aos="fade-up">
 						<h1 className="text-center">
-							<span className={`text-decorated ${styles.authorTitle}`}>Michael Gary Scott </span>{' '}
+							<span className={`text-decorated ${styles.authorTitle}`}>{card.author} </span>{' '}
 							<span className={styles.authorSubTitle}>Expert</span>
 						</h1>
 
 						<p className={`text-decorated-blog`}>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-							voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.{' '}
+							{' '}
+							{card.author_description ||
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}{' '}
 						</p>
 						<div className={styles.authorSocialBox}>
 							{socials.map(social => (

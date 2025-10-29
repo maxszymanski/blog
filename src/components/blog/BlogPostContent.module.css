@@ -1,0 +1,81 @@
+.title {
+	font-family: Inter;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 32px;
+	letter-spacing: 1px;
+	margin-top: 64px;
+	margin-bottom: 24px;
+}
+
+.subtitle {
+	opacity: 40%;
+}
+
+.contentBox {
+	width: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+
+	@media screen and (min-width: 1024px) {
+		margin: 0;
+	}
+}
+
+.contentImage {
+	width: 100%;
+	height: auto;
+	max-height: 400px;
+	margin-top: 32px;
+}
+.tableBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+	@media screen and (min-width: 1024px) {
+		max-width: 160px;
+		align-items: start;
+	}
+}
+.tableTitle {
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 20px;
+	line-height: 24px;
+	padding-bottom: 24px;
+	color: rgba(251, 99, 6, 1);
+
+	@media screen and (min-width: 1024px) {
+		max-width: 110px;
+	}
+}
+.tableLinkList {
+	padding-top: 24px;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.tableLink {
+	display: inline-block;
+	color: rgba(255, 255, 255, 1);
+	opacity: 50%;
+	transition: opacity 0.3s;
+	text-decoration: underline;
+	font-size: 14px;
+	&:hover {
+		opacity: 100%;
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 64px;
+
+	@media screen and (min-width: 1024px) {
+		flex-direction: row;
+	}
+}

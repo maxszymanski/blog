@@ -1,0 +1,134 @@
+.faq {
+	&__title {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+		letter-spacing: 1px;
+		margin-bottom: 8px;
+		margin-top: 64px;
+	}
+	&__header {
+		width: 100%;
+		max-width: 442px;
+		padding-right: 62px;
+		border-right: 1px solid #361d0e;
+
+		@media screen and (max-width: 985px) {
+			border-right: unset;
+			max-width: 100%;
+			padding-right: 0;
+			padding-bottom: 36px;
+			border-bottom: 1px solid #361d0e;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__container {
+		display: flex;
+		gap: 62px;
+		@media screen and (max-width: 985px) {
+			flex-direction: column;
+		}
+	}
+	&__list {
+		display: flex;
+		gap: 16px;
+		flex: 1;
+		flex-direction: column;
+	}
+	&__question {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 28px;
+
+		padding: 16px 25px 16px 0;
+
+		p {
+			font-size: 16px;
+			font-weight: 600;
+			opacity: 1;
+			transition: 0.3s;
+		}
+
+		img {
+			transition: 0.3s;
+		}
+	}
+	&__answer {
+		font-size: 14px;
+		font-weight: 500;
+		height: 0;
+		overflow: hidden;
+		transition: 0.3s;
+		padding-bottom: 0;
+		opacity: 0;
+	}
+	&__image {
+		margin-top: 64px;
+		padding-top: 32px;
+		border-top: 1px solid #201e1e;
+	}
+	&__blur {
+		&__1,
+		&__2 {
+			background: #fb6306;
+			position: absolute;
+			border-radius: 50%;
+			filter: blur(120px);
+			opacity: 0.25;
+		}
+		&__1 {
+			top: 50%;
+			transform: translateY(-50%);
+			right: -400px;
+			width: 500px;
+			height: 500px;
+			z-index: -1;
+		}
+		&__2 {
+			left: -10%;
+			width: 240px;
+			height: 240px;
+			bottom: 10%;
+			z-index: 5;
+		}
+	}
+	&__item {
+		position: relative;
+		z-index: 5;
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			background-position: bottom right;
+			background-image: url('../../assets/images/faq/faqBorder.svg');
+			height: 70px;
+			z-index: -1;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.active {
+			.faq {
+				&__question {
+					img {
+						transform: rotate(180deg);
+					}
+				}
+				&__answer {
+					height: auto;
+					padding-bottom: 24px;
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}

@@ -1,14 +1,11 @@
 import { Button, Typography } from '@mui/material'
-import { useState } from 'react'
 import styles from './BlogHeader.module.css'
 import Dots from 'components/overlay/dots/dots'
 import Fire from '../../assets/images/blog/fire.svg'
 
 const categories = ['Popular', 'Web hosting', 'VPN', 'Cybersecurity', 'Engineering', 'Product Updates', 'Top stories']
 
-function BlogHeader() {
-	const [selectedCategory, setSelectedCategory] = useState(null)
-
+function BlogHeader({ setSelectedCategory, listRef }) {
 	return (
 		<header className="section">
 			<div className="inside pb-6 ">
@@ -34,6 +31,9 @@ function BlogHeader() {
 							className={`btn btn-blog btn-card`}
 							onClick={() => {
 								setSelectedCategory(category)
+								if (listRef.current) {
+									listRef.current.scrollTo({ top: 0, behavior: 'smooth' })
+								}
 							}}
 							disableRipple>
 							{category === 'Popular' && <img alt="fire icon" width={24} height={24} src={Fire} />}
