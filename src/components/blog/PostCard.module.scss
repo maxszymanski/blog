@@ -301,6 +301,12 @@
 .cardLogos {
 	position: relative;
 	flex-shrink: 0;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.cardLogos img {
+	position: relative;
 }
 
 .ratingBox {
