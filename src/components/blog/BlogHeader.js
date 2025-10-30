@@ -25,7 +25,7 @@ function BlogHeader({ setSelectedCategory, listRef }) {
 				</div>
 				<div className={styles.btnsBox}>
 					{categories.map((category, idx) => (
-						<Button
+						<button
 							key={category}
 							data-aos="fade-up"
 							className={`btn-blog `}
@@ -34,11 +34,10 @@ function BlogHeader({ setSelectedCategory, listRef }) {
 								if (listRef.current) {
 									listRef.current.scrollTo({ top: 0, behavior: 'smooth' })
 								}
-							}}
-							disableRipple>
+							}}>
 							{category === 'Popular' && <img alt="fire icon" width={24} height={24} src={Fire} />}
 							<Typography>{category}</Typography>
-						</Button>
+						</button>
 					))}
 				</div>
 			</div>

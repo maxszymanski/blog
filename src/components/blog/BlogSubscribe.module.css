@@ -60,12 +60,8 @@
 
 .formBtn {
 	flex-shrink: 0;
-	color: rgb(251, 99, 6) !important;
-	transition: color 0.3s !important;
+
 	cursor: pointer;
-}
-.formBtn:hover {
-	color: rgb(251, 99, 6, 0.5) !important;
 }
 
 .subscribeBox {

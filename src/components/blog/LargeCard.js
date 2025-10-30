@@ -4,6 +4,7 @@ import Fire from '../../assets/images/blog/fire.svg'
 import { Typography } from '@mui/material'
 import Clock from '../../assets/images/blog/clock.svg'
 import Logo from '../../assets/images/blog/logo.svg'
+import LargeCardHero from '../../assets/images/blog/large-card-hero.png'
 
 function LargeCard({ card }) {
 	return (
@@ -25,6 +26,9 @@ function LargeCard({ card }) {
 						</p>
 					</div>
 				</div>
+			</div>
+			<div className={styles.absoluteHeroBox}>
+				<img src={LargeCardHero} alt="large hero" className={styles.absoluteHero} />
 			</div>
 		</Link>
 	)

@@ -17,7 +17,7 @@ function HeaderLargeCard({ card }) {
 	return (
 		<div>
 			<div className={`${styles.largeCardPost} `} data-aos="fade-up">
-				<div className={styles.imageBox}>
+				<div className={styles.largeImageBox}>
 					<img src={card.largeImage} alt="data flow" className={styles.largeCardHero} />
 					<div className={styles.btnLargeBox}>
 						<p className="btn btn-card ">

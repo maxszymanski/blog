@@ -235,7 +235,7 @@ p.text {
 		opacity: 1;
 	}
 
-	transition: border $animation1;
+	transition: all 0.3s !important;
 
 	&:hover {
 		border: 1.5px solid rgba($color-orange, 0.24);

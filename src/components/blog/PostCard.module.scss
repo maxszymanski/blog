@@ -100,8 +100,8 @@
 
 .largeCard {
 	display: none;
-	background-image: url('../../assets/images/blog/large-card.png');
-	// background-size: 100% 100%;
+	background-image: url('../../assets/images/blog/large-card-bg.png');
+
 	background-size: 100% 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -109,7 +109,8 @@
 	padding: 32px;
 	border-radius: 15px;
 	overflow: hidden;
-	transition: all 0.5s !important;
+
+	position: relative;
 
 	@media screen and (min-width: 1024px) {
 		height: 340px;
@@ -117,8 +118,21 @@
 		margin-bottom: 48px;
 	}
 }
-.largeCard:hover {
-	background-size: 103% 103%;
+.largeCard:hover .absoluteHero {
+	transform: scale(103%);
+}
+.absoluteHero {
+	transition: transform 0.5s;
+}
+
+.absoluteHeroBox {
+	position: absolute;
+	height: 338px;
+	width: 694px;
+	top: 1px;
+	right: 1px;
+	overflow: hidden;
+	z-index: 0;
 }
 
 .cardLargeText {
@@ -128,6 +142,8 @@
 	max-width: 504px;
 	line-height: 48px;
 	margin: 32px 0;
+	position: relative;
+	z-index: 1;
 }
 .cardLine {
 	width: 568px;
@@ -139,15 +155,20 @@
 
 .imageBox {
 	position: relative;
+	overflow: hidden;
+	height: 250px;
+}
+.largeImageBox {
+	position: relative;
 }
 
 .cardHero {
 	width: 100%;
-	height: auto;
-	max-height: 250px;
+
 	object-fit: cover;
 	position: relative;
 	transition: transform 0.5s;
+	height: 100%;
 }
 
 .largeCardPost {
@@ -164,9 +185,6 @@
 	@media screen and (min-width: 768px) {
 		display: block;
 	}
-}
-.largeCardPost:hover .largeCardHero {
-	transform: scale(103%);
 }
 
 .largeCardHero {
