@@ -1,6 +1,7 @@
 import Dots from 'components/overlay/dots/dots'
 import styles from './BlogSubscribe.module.css'
 import { Typography } from '@mui/material'
+import users from '../../assets/images/blog/users.svg'
 
 function BlogSubscribe() {
 	return (
@@ -24,7 +25,8 @@ function BlogSubscribe() {
 							}}
 							type="button"
 							disableRipple>
-							<Typography>Subscribe</Typography>
+							<Typography>Subscribe</Typography>{' '}
+							<img alt="fire icon" width={20} height={20} src={users} className={styles.subscribeIcon} />
 						</button>
 					</form>
 				</div>
