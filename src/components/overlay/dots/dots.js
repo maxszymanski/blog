@@ -532,6 +532,46 @@ export default function Dots(props) {
 					))}
 				</>
 			) : null}
+			{props.type === 'blog-three' ? (
+				<>
+					{[...Array(9)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					{[...Array(9)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					{[...Array(9)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					{[...Array(9)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					{[...Array(9)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					<OneDot type="empty" />
+					{[...Array(9)].map((x, i) => (
+						<OneDot type="normal" key={i} />
+					))}
+				</>
+			) : null}
 			{props.type === 'blog-one' ? (
 				<>
 					{[...Array(5)].map((x, i) => (

@@ -111,6 +111,17 @@
 	z-index: 3;
 
 	@media screen and (max-width: 560px) {
+		top: -20px;
+	}
+}
+.dots[data-type='blog-three'] {
+	width: 148px;
+	left: 0px;
+	top: 100px;
+
+	z-index: 3;
+
+	@media screen and (max-width: 560px) {
 		display: none;
 	}
 }

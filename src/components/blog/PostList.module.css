@@ -29,3 +29,18 @@
 		}
 	}
 }
+
+.articleSection {
+	padding-bottom: 80px;
+
+	@media screen and (min-width: 1024px) {
+		padding-bottom: 40px;
+	}
+}
+
+.articleLinkBox {
+	display: flex;
+	justify-content: center;
+	padding-top: 24px;
+	padding-bottom: 49px;
+}
